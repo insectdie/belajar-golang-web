@@ -67,6 +67,7 @@ func TestGetCookie(t *testing.T) {
 	recorder := httptest.NewRecorder()
 
 	GetCookie(recorder, request)
+
 	body, _ := io.ReadAll(recorder.Result().Body)
 	fmt.Println(string(body))
 }
